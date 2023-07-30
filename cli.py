@@ -8,7 +8,7 @@ import pyocr
 try:
     input_image = sys.argv[1]
 except IndexError:
-    print('No input image provided. Exiting...')
+    print("No input image provided. Exiting...")
     sys.exit(1)
 
 tools = pyocr.get_available_tools()
@@ -17,15 +17,15 @@ if len(tools) == 0:
     sys.exit(1)
 
 tool = tools[0]
-print(f'Using {tool.get_name()}')
+print(f"Using {tool.get_name()}")
 
 langs = tool.get_available_languages()
-langs.remove('osd')
-lang = 'eng'
+langs.remove("osd")
+lang = "eng"
 
 image = Image.open(input_image)
 
-print(f'Input image: {input_image}\n\n')
+print(f"Input image: {input_image}\n\n")
 
 out = tool.image_to_string(image, lang).replace("|", "I")
 
