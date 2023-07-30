@@ -11,4 +11,3 @@ pyocr = "==0.8.3"
 
 [requires]
 python_version = "3.11"
-python_full_version = "3.11.4"
