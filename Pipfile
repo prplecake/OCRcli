@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 pillow = "==10.0.1"
-pyocr = "==0.8.3"
+pyocr = "==0.8.5"
 
 [dev-packages]
 flake8 = "*"
